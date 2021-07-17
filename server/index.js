@@ -33,7 +33,7 @@ app.use(cookieParser());
 
 var client_id = "727cced3396f4edabf7e7d98b826b168"; // Your client id
 var client_secret = "102965d90b614e5e9fe7ce5de1eadbdb"; // Your secret
-var redirect_uri = "/api/callback"; // Your redirect uri
+var redirect_uri = "https://aqueous-scrubland-03780.herokuapp.com/api/callback"; // Your redirect uri
 
 var generateRandomString = function (length) {
   var text = "";
@@ -93,7 +93,7 @@ app.get("/api/callback", function (req, res) {
       var access_token = body.access_token,
         refresh_token = body.refresh_token;
       res.redirect(
-        "http://localhost:8080/nowplaying?" +
+        "https://spotify-overlay.herokuapp.com/nowplaying?" +
           querystring.stringify({
             access_token: access_token,
             refresh_token: refresh_token,
@@ -123,7 +123,7 @@ app.get('/api/refreshtoken', function(req, res){
     if (!error && response.statusCode == 200) {
       var access_token = body.access_token;
       res.redirect(
-        "http://localhost:8080/nowplaying?" +
+        "https://spotify-overlay.herokuapp.com/nowplaying?" +
           querystring.stringify({
             access_token: access_token,
             refresh_token: refresh_token,
