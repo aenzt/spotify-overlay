@@ -1,0 +1,25 @@
+{
+  "name": "spotify-overlay",
+  "version": "1.0.0",
+  "description": "spot overlay",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js"
+  },
+  "author": "Raihan Parama",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "querystring": "^0.2.1",
+    "request": "^2.88.2",
+    "spotify-web-api-node": "^5.0.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-router": "~4.5.0",
+    "nodemon": "^2.0.12"
+  }
+}
